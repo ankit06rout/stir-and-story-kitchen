@@ -1078,3 +1078,169 @@ a { color: inherit; text-decoration: none; transition: color var(--transition); 
 .gallery-prev { left: 12px; }
 .gallery-next { right: 12px; }
 
+/* ═══════════════════════════════════════
+   MOBILE HYGIENE FIXES
+═══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ─── Hero ─── */
+  .hero {
+    min-height: auto;
+    padding: var(--space-16) var(--space-6);
+    text-align: center;
+  }
+  .hero-content {
+    padding: var(--space-12) var(--space-4);
+  }
+  .hero-headline {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    max-width: none;
+  }
+  .hero-sub {
+    font-size: var(--text-base);
+    max-width: none;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ─── Nav ─── */
+  .nav-inner {
+    padding: 0 var(--space-4);
+  }
+
+  /* ─── Brand strip ─── */
+  .brand-strip-inner {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+    padding: 0 var(--space-6);
+  }
+
+  /* ─── Product section ─── */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .product-gallery {
+    position: static;
+  }
+  .gallery-main {
+    aspect-ratio: 1/1;
+  }
+  .gallery-thumbs {
+    gap: var(--space-2);
+  }
+  .thumb {
+    width: 60px;
+    height: 60px;
+  }
+  .variant-options {
+    flex-direction: column;
+  }
+  .variant-btn {
+    width: 100%;
+  }
+  .btn-full {
+    font-size: var(--text-sm);
+    padding: var(--space-4);
+  }
+
+  /* ─── Bundle ─── */
+  .bundle-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .bundle-image {
+    display: none;
+  }
+  .bundle-pricing {
+    justify-content: center;
+  }
+  .bundle-card .btn {
+    width: 100%;
+  }
+
+  /* ─── Features ─── */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-card {
+    padding: var(--space-6);
+  }
+
+  /* ─── Lifestyle ─── */
+  .lifestyle-split {
+    grid-template-columns: 1fr;
+  }
+  .lifestyle-split--reverse {
+    direction: ltr;
+  }
+  .lifestyle-image-col {
+    aspect-ratio: 4/3;
+    min-height: auto;
+  }
+  .lifestyle-text-col {
+    padding: var(--space-10) var(--space-6);
+  }
+  .use-cases {
+    padding-left: 0;
+  }
+
+  /* ─── Story ─── */
+  .story-text-card {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  /* ─── Mission ─── */
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ─── Reviews ─── */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ─── Final CTA ─── */
+  .cta-headline {
+    font-size: var(--text-xl);
+  }
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .cta-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ─── Footer ─── */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .footer-brand, .footer-links, .footer-contact {
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+
+  /* ─── General ─── */
+  .section-header {
+    text-align: center;
+    padding: 0 var(--space-4);
+  }
+  .btn {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+  }
+}
